@@ -1,6 +1,8 @@
-﻿using System;
+using Dyabp.Saas;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace Dyabp.Saas.EntityFrameworkCore
 {
@@ -38,6 +40,16 @@ namespace Dyabp.Saas.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+
+
+            builder.Entity<SaasEdition>(b =>
+            {
+                b.ToTable(options.TablePrefix + "SaasEditions", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
         }
     }
 }

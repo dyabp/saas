@@ -1,7 +1,18 @@
 {
   "culture": "tr",
   "texts": {
-    "ManageYourProfile":  "Profil yönetimi",
-    "SamplePageMessage": "Saas modulünden örnek bir sayfa"
+    "ManageYourProfile": "Profil yönetimi",
+    "SamplePageMessage": "Saas modulünden örnek bir sayfa",
+    "Permission:SaasEdition": "SaasEdition",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:SaasEdition": "MenuSaasEdition",
+    "SaasEdition": "SaasEdition",
+    "SaasEditionDisplayName": "SaasEditionDisplayName",
+    "CreateSaasEdition": "CreateSaasEdition",
+    "EditSaasEdition": "EditSaasEdition",
+    "SaasEditionDeletionConfirmationMessage": "Are you sure to delete the saasEdition {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

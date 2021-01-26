@@ -2,6 +2,17 @@
   "culture": "zh-Hans",
   "texts": {
     "ManageYourProfile": "管理个人资料",
-    "SamplePageMessage": "Saas模块的示例页面"
+    "SamplePageMessage": "Saas模块的示例页面",
+    "Permission:SaasEdition": "SaasEdition",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:SaasEdition": "MenuSaasEdition",
+    "SaasEdition": "SaasEdition",
+    "SaasEditionDisplayName": "SaasEditionDisplayName",
+    "CreateSaasEdition": "CreateSaasEdition",
+    "EditSaasEdition": "EditSaasEdition",
+    "SaasEditionDeletionConfirmationMessage": "Are you sure to delete the saasEdition {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

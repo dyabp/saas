@@ -1,6 +1,17 @@
 {
   "culture": "zh-Hant",
   "texts": {
-    "ManageYourProfile":  "管理個人資料" 
+    "ManageYourProfile": "管理個人資料",
+    "Permission:SaasEdition": "SaasEdition",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:SaasEdition": "MenuSaasEdition",
+    "SaasEdition": "SaasEdition",
+    "SaasEditionDisplayName": "SaasEditionDisplayName",
+    "CreateSaasEdition": "CreateSaasEdition",
+    "EditSaasEdition": "EditSaasEdition",
+    "SaasEditionDeletionConfirmationMessage": "Are you sure to delete the saasEdition {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

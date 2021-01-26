@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+using Dyabp.Saas;
+using Dyabp.Saas.Dtos;
+using AutoMapper;
 
 namespace Dyabp.Saas
 {
@@ -9,6 +11,9 @@ namespace Dyabp.Saas
             /* You can configure your AutoMapper mapping configuration here.
              * Alternatively, you can split your mapping configurations
              * into multiple profile classes for a better organization. */
+            CreateMap<SaasEdition, SaasEditionDto>();
+            CreateMap<CreateSaasEditionDto, SaasEdition>(MemberList.Source);
+            CreateMap<UpdateSaasEditionDto, SaasEdition>(MemberList.Source);
         }
     }
 }

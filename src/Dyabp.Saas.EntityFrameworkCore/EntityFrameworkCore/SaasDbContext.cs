@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using Dyabp.Saas;
 
 namespace Dyabp.Saas.EntityFrameworkCore
 {
@@ -10,6 +11,7 @@ namespace Dyabp.Saas.EntityFrameworkCore
         /* Add DbSet for each Aggregate Root here. Example:
          * public DbSet<Question> Questions { get; set; }
          */
+        public DbSet<SaasEdition> SaasEditions { get; set; }
 
         public SaasDbContext(DbContextOptions<SaasDbContext> options) 
             : base(options)

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
+using Dyabp.Saas.Localization;
+using Dyabp.Saas.Permissions;
 using Volo.Abp.UI.Navigation;
 
 namespace Dyabp.Saas.Web.Menus
@@ -13,11 +15,17 @@ namespace Dyabp.Saas.Web.Menus
             }
         }
 
-        private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
+        private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
-            //Add main menu items.
+            var l = context.GetLocalizer<SaasResource>();
+             //Add main menu items.
 
-            return Task.CompletedTask;
+            if (await context.IsGrantedAsync(SaasPermissions.SaasEdition.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/Dyabp/Saas/SaasEdition")
+                );
+            }
         }
     }
 }

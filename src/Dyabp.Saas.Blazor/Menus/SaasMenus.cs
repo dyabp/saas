@@ -1,4 +1,4 @@
-﻿namespace Dyabp.Saas.Blazor.Menus
+namespace Dyabp.Saas.Blazor.Menus
 {
     public class SaasMenus
     {
@@ -7,5 +7,6 @@
         //Add your menu items here...
         //public const string Home = Prefix + ".MyNewMenuItem";
 
+        public const string SaasEdition = Prefix + ".SaasEdition";
     }
 }

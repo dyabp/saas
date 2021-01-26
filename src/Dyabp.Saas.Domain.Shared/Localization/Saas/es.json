@@ -2,6 +2,17 @@
   "culture": "es",
   "texts": {
     "ManageYourProfile": "Gestiona tu perfil",
-    "SamplePageMessage": "Una página de ejemplo para el módulo Saas "
+    "SamplePageMessage": "Una página de ejemplo para el módulo Saas ",
+    "Permission:SaasEdition": "SaasEdition",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:SaasEdition": "MenuSaasEdition",
+    "SaasEdition": "SaasEdition",
+    "SaasEditionDisplayName": "SaasEditionDisplayName",
+    "CreateSaasEdition": "CreateSaasEdition",
+    "EditSaasEdition": "EditSaasEdition",
+    "SaasEditionDeletionConfirmationMessage": "Are you sure to delete the saasEdition {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }
