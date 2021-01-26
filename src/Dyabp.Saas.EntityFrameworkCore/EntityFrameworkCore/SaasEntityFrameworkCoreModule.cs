@@ -19,6 +19,7 @@ namespace Dyabp.Saas.EntityFrameworkCore
                  * options.AddRepository<Question, EfCoreQuestionRepository>();
                  */
                 options.AddRepository<SaasEdition, SaasEditionRepository>();
+                options.AddRepository<SaasTenantConnectionString, SaasTenantConnectionStringRepository>();
             });
         }
     }

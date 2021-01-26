@@ -1,0 +1,20 @@
+@page
+@using Dyabp.Saas.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal;
+@inject IHtmlLocalizer<SaasResource> L
+@model Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString.EditModalModel
+@{
+    Layout = null;
+}
+<abp-dynamic-form abp-model="ViewModel" data-ajaxForm="true" asp-page="EditModal">
+    <abp-modal>
+        <abp-modal-header title="@L["EditSaasTenantConnectionString"].Value"></abp-modal-header>
+        <abp-modal-body>
+            <abp-input type="hidden" asp-for="Id.TenantId" />
+            <abp-input type="hidden" asp-for="Id.Name" />
+            <abp-form-content />
+        </abp-modal-body>
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</abp-dynamic-form>

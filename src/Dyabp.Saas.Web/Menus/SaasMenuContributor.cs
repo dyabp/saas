@@ -26,6 +26,12 @@ namespace Dyabp.Saas.Web.Menus
                     new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/Dyabp/Saas/SaasEdition")
                 );
             }
+            if (await context.IsGrantedAsync(SaasPermissions.SaasTenantConnectionString.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/Dyabp/Saas/SaasTenantConnectionString")
+                );
+            }
         }
     }
 }

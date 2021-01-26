@@ -13,6 +13,15 @@
     "CreateSaasEdition": "CreateSaasEdition",
     "EditSaasEdition": "EditSaasEdition",
     "SaasEditionDeletionConfirmationMessage": "Are you sure to delete the saasEdition {0}?",
-    "SuccessfullyDeleted": "Successfully deleted"
+    "SuccessfullyDeleted": "Successfully deleted",
+    "Permission:SaasTenantConnectionString": "SaasTenantConnectionString",
+    "Menu:SaasTenantConnectionString": "MenuSaasTenantConnectionString",
+    "SaasTenantConnectionString": "SaasTenantConnectionString",
+    "SaasTenantConnectionStringTenantId": "SaasTenantConnectionStringTenantId",
+    "SaasTenantConnectionStringName": "SaasTenantConnectionStringName",
+    "SaasTenantConnectionStringValue": "SaasTenantConnectionStringValue",
+    "CreateSaasTenantConnectionString": "CreateSaasTenantConnectionString",
+    "EditSaasTenantConnectionString": "EditSaasTenantConnectionString",
+    "SaasTenantConnectionStringDeletionConfirmationMessage": "Are you sure to delete the saasTenantConnectionString {0}?"
   }
 }

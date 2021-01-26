@@ -1,5 +1,7 @@
 using Dyabp.Saas.Dtos;
 using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasEdition.ViewModels;
+using Dyabp.Saas.Dtos;
+using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString.ViewModels;
 using AutoMapper;
 
 namespace Dyabp.Saas.Web
@@ -14,6 +16,9 @@ namespace Dyabp.Saas.Web
             CreateMap<SaasEditionDto, EditSaasEditionViewModel>();
             CreateMap<CreateSaasEditionViewModel, CreateSaasEditionDto>();
             CreateMap<EditSaasEditionViewModel, UpdateSaasEditionDto>();
+            CreateMap<SaasTenantConnectionStringDto, EditSaasTenantConnectionStringViewModel>();
+            CreateMap<CreateSaasTenantConnectionStringViewModel, CreateSaasTenantConnectionStringDto>();
+            CreateMap<EditSaasTenantConnectionStringViewModel, UpdateSaasTenantConnectionStringDto>();
         }
     }
 }

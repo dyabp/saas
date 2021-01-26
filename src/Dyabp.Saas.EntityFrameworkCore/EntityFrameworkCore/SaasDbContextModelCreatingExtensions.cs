@@ -50,6 +50,21 @@ namespace Dyabp.Saas.EntityFrameworkCore
 
                 /* Configure more properties here */
             });
+
+
+            builder.Entity<SaasTenantConnectionString>(b =>
+            {
+                b.ToTable(options.TablePrefix + "SaasTenantConnectionStrings", options.Schema);
+                b.ConfigureByConvention(); 
+                
+                b.HasKey(e => new
+                {
+                    e.TenantId,
+                    e.Name,
+                });
+
+                /* Configure more properties here */
+            });
         }
     }
 }

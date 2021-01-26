@@ -14,6 +14,11 @@ namespace Dyabp.Saas.Permissions
             saasEditionPermission.AddChild(SaasPermissions.SaasEdition.Create, L("Permission:Create"));
             saasEditionPermission.AddChild(SaasPermissions.SaasEdition.Update, L("Permission:Update"));
             saasEditionPermission.AddChild(SaasPermissions.SaasEdition.Delete, L("Permission:Delete"));
+
+            var saasTenantConnectionStringPermission = myGroup.AddPermission(SaasPermissions.SaasTenantConnectionString.Default, L("Permission:SaasTenantConnectionString"));
+            saasTenantConnectionStringPermission.AddChild(SaasPermissions.SaasTenantConnectionString.Create, L("Permission:Create"));
+            saasTenantConnectionStringPermission.AddChild(SaasPermissions.SaasTenantConnectionString.Update, L("Permission:Update"));
+            saasTenantConnectionStringPermission.AddChild(SaasPermissions.SaasTenantConnectionString.Delete, L("Permission:Delete"));
         }
 
         private static LocalizableString L(string name)

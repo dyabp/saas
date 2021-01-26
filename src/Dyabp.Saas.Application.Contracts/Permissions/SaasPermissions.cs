@@ -18,5 +18,13 @@ namespace Dyabp.Saas.Permissions
             public const string Create = Default + ".Create";
             public const string Delete = Default + ".Delete";
         }
+
+        public class SaasTenantConnectionString
+        {
+            public const string Default = GroupName + ".SaasTenantConnectionString";
+            public const string Update = Default + ".Update";
+            public const string Create = Default + ".Create";
+            public const string Delete = Default + ".Delete";
+        }
     }
 }
