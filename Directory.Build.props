@@ -25,7 +25,7 @@
     <!-- Mongo2Go https://www.nuget.org/packages/Mongo2Go -->
     <Mongo2GoPackageVersion>2.2.14</Mongo2GoPackageVersion>
 	
-	<!-- abp https://www.nuget.org/packages/Volo.Abp -->
+	  <!-- abp https://www.nuget.org/packages/Volo.Abp -->
     <AbpPackageVersion>4.2.0-rc.2</AbpPackageVersion>
 
   </PropertyGroup>
