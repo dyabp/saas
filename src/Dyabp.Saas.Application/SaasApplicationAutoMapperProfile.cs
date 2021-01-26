@@ -17,6 +17,9 @@ namespace Dyabp.Saas
             CreateMap<SaasTenantConnectionString, SaasTenantConnectionStringDto>();
             CreateMap<CreateSaasTenantConnectionStringDto, SaasTenantConnectionString>(MemberList.Source);
             CreateMap<UpdateSaasTenantConnectionStringDto, SaasTenantConnectionString>(MemberList.Source);
+            CreateMap<SaasTenant, SaasTenantDto>();
+            CreateMap<CreateSaasTenantDto, SaasTenant>(MemberList.Source);
+            CreateMap<UpdateSaasTenantDto, SaasTenant>(MemberList.Source);
         }
     }
 }

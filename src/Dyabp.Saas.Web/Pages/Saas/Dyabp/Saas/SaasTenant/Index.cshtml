@@ -1,0 +1,48 @@
+@page
+@using Dyabp.Saas.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant
+@using Dyabp.Saas.Localization
+@using Dyabp.Saas.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<SaasResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["SaasTenant"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:SaasTenant"].Value);
+    PageLayout.Content.MenuItemName = SaasMenus.SaasTenant;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Saas/Dyabp/Saas/SaasTenant/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/Saas/Dyabp/Saas/SaasTenant/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["SaasTenant"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+			    @if (await Authorization.IsGrantedAsync(SaasPermissions.SaasTenant.Create))
+                {
+                <abp-button id="NewSaasTenantButton"
+                            text="@L["CreateSaasTenant"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="SaasTenantTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

@@ -65,6 +65,16 @@ namespace Dyabp.Saas.EntityFrameworkCore
 
                 /* Configure more properties here */
             });
+
+
+            builder.Entity<SaasTenant>(b =>
+            {
+                b.ToTable(options.TablePrefix + "SaasTenants", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
         }
     }
 }

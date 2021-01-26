@@ -32,6 +32,12 @@ namespace Dyabp.Saas.Blazor.Menus
                     new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/Dyabp/Saas/SaasTenantConnectionString")
                 );
             }
+            if (await context.IsGrantedAsync(SaasPermissions.SaasTenant.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasTenant, l["Menu:SaasTenant"], "/Saas/Dyabp/Saas/SaasTenant")
+                );
+            }
         }
     }
 }

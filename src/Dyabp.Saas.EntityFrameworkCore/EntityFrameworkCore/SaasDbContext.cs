@@ -13,6 +13,7 @@ namespace Dyabp.Saas.EntityFrameworkCore
          */
         public DbSet<SaasEdition> SaasEditions { get; set; }
         public DbSet<SaasTenantConnectionString> SaasTenantConnectionStrings { get; set; }
+        public DbSet<SaasTenant> SaasTenants { get; set; }
 
         public SaasDbContext(DbContextOptions<SaasDbContext> options) 
             : base(options)

@@ -22,6 +22,15 @@
     "SaasTenantConnectionStringValue": "SaasTenantConnectionStringValue",
     "CreateSaasTenantConnectionString": "CreateSaasTenantConnectionString",
     "EditSaasTenantConnectionString": "EditSaasTenantConnectionString",
-    "SaasTenantConnectionStringDeletionConfirmationMessage": "Are you sure to delete the saasTenantConnectionString {0}?"
+    "SaasTenantConnectionStringDeletionConfirmationMessage": "Are you sure to delete the saasTenantConnectionString {0}?",
+    "Permission:SaasTenant": "SaasTenant",
+    "Menu:SaasTenant": "MenuSaasTenant",
+    "SaasTenant": "SaasTenant",
+    "SaasTenantName": "SaasTenantName",
+    "SaasTenantEditionId": "SaasTenantEditionId",
+    "SaasTenantConnectionStrings": "SaasTenantConnectionStrings",
+    "CreateSaasTenant": "CreateSaasTenant",
+    "EditSaasTenant": "EditSaasTenant",
+    "SaasTenantDeletionConfirmationMessage": "Are you sure to delete the saasTenant {0}?"
   }
 }

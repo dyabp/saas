@@ -13,5 +13,6 @@ namespace Dyabp.Saas.EntityFrameworkCore
          */
         DbSet<SaasEdition> SaasEditions { get; set; }
         DbSet<SaasTenantConnectionString> SaasTenantConnectionStrings { get; set; }
+        DbSet<SaasTenant> SaasTenants { get; set; }
     }
 }
