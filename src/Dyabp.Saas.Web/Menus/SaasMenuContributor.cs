@@ -38,7 +38,7 @@ namespace Dyabp.Saas.Web.Menus
                SaasMenus.Prefix,
                l["Menu:Saas"],
                "/Saas",
-               icon: "fa fa-globe"
+               icon: "fa fa-users"
            );
 
             administrationMenu.AddItem(saasMenu);

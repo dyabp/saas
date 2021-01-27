@@ -7,8 +7,8 @@ namespace Dyabp.Saas.Web.Menus
         //Add your menu items here...
         //public const string Home = Prefix + ".MyNewMenuItem";
 
-        public const string SaasEdition = Prefix + ".SaasEdition";
-        public const string SaasTenantConnectionString = Prefix + ".SaasTenantConnectionString";
-        public const string SaasTenant = Prefix + ".SaasTenant";
+        public const string SaasEdition = Prefix + ".Editions";
+        public const string SaasTenantConnectionString = Prefix + ".TenantConnectionStrings";
+        public const string SaasTenant = Prefix + ".Tenants";
     }
 }
