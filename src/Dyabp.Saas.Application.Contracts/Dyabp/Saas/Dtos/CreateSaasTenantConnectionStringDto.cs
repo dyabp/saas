@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel;
+
 namespace Dyabp.Saas.Dtos
 {
-    [Serializable]
     public class CreateSaasTenantConnectionStringDto
     {
         public Guid TenantId { get; set; }

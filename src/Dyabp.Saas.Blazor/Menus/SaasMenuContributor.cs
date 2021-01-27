@@ -23,19 +23,19 @@ namespace Dyabp.Saas.Blazor.Menus
             if (await context.IsGrantedAsync(SaasPermissions.SaasEdition.Default))
             {
                 context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/Dyabp/Saas/SaasEdition")
+                    new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/SaasEdition")
                 );
             }
             if (await context.IsGrantedAsync(SaasPermissions.SaasTenantConnectionString.Default))
             {
                 context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/Dyabp/Saas/SaasTenantConnectionString")
+                    new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/SaasTenantConnectionString")
                 );
             }
             if (await context.IsGrantedAsync(SaasPermissions.SaasTenant.Default))
             {
                 context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasTenant, l["Menu:SaasTenant"], "/Saas/Dyabp/Saas/SaasTenant")
+                    new ApplicationMenuItem(SaasMenus.SaasTenant, l["Menu:SaasTenant"], "/Saas/SaasTenant")
                 );
             }
         }

@@ -1,13 +1,10 @@
 using System;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using Volo.Abp.Validation;
 
 namespace Dyabp.Saas.Dtos
 {
-    [Serializable]
-    public class UpdateSaasTenantDto
+    public class UpdateSaasTenantDto : SaasTenantCreateOrUpdateDtoBase
     {
-        public string Name { get; set; }
-
-        public Guid? EditionId { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace Dyabp.Saas
         ICrudAppService< 
             SaasEditionDto, 
             Guid, 
-            PagedAndSortedResultRequestDto,
+            GetSaasEditionsInput,
             CreateSaasEditionDto,
             UpdateSaasEditionDto>
     {

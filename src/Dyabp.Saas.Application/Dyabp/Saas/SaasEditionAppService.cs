@@ -6,7 +6,7 @@ using Volo.Abp.Application.Services;
 
 namespace Dyabp.Saas
 {
-    public class SaasEditionAppService : CrudAppService<SaasEdition, SaasEditionDto, Guid, PagedAndSortedResultRequestDto, CreateSaasEditionDto, UpdateSaasEditionDto>,
+    public class SaasEditionAppService : CrudAppService<SaasEdition, SaasEditionDto, Guid, GetSaasEditionsInput, CreateSaasEditionDto, UpdateSaasEditionDto>,
         ISaasEditionAppService
     {
         protected override string GetPolicyName { get; set; } = SaasPermissions.SaasEdition.Default;

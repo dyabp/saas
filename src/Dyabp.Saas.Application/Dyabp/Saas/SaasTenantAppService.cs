@@ -6,7 +6,7 @@ using Volo.Abp.Application.Services;
 
 namespace Dyabp.Saas
 {
-    public class SaasTenantAppService : CrudAppService<SaasTenant, SaasTenantDto, Guid, PagedAndSortedResultRequestDto, CreateSaasTenantDto, UpdateSaasTenantDto>,
+    public class SaasTenantAppService : CrudAppService<SaasTenant, SaasTenantDto, Guid, GetSaasTenantsInput, CreateSaasTenantDto, UpdateSaasTenantDto>,
         ISaasTenantAppService
     {
         protected override string GetPolicyName { get; set; } = SaasPermissions.SaasTenant.Default;

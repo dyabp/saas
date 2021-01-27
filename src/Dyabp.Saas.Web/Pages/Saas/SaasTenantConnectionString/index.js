@@ -3,8 +3,8 @@ $(function () {
     var l = abp.localization.getResource('Saas');
 
     var service = dyabp.saas.saasTenantConnectionString;
-    var createModal = new abp.ModalManager(abp.appPath + 'Saas/Dyabp/Saas/SaasTenantConnectionString/CreateModal');
-    var editModal = new abp.ModalManager(abp.appPath + 'Saas/Dyabp/Saas/SaasTenantConnectionString/EditModal');
+    var createModal = new abp.ModalManager(abp.appPath + 'Saas/SaasTenantConnectionString/CreateModal');
+    var editModal = new abp.ModalManager(abp.appPath + 'Saas/SaasTenantConnectionString/EditModal');
 
     var dataTable = $('#SaasTenantConnectionStringTable').DataTable(abp.libs.datatables.normalizeConfiguration({
         processing: true,

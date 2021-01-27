@@ -3,7 +3,6 @@ using System.ComponentModel;
 
 namespace Dyabp.Saas.Dtos
 {
-    [Serializable]
     public class UpdateSaasTenantConnectionStringDto
     {
         public Guid TenantId { get; set; }

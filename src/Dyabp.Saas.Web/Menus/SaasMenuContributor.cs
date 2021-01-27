@@ -17,25 +17,48 @@ namespace Dyabp.Saas.Web.Menus
 
         private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
+            if (context.Menu.Name != StandardMenus.Main)
+            {
+                return;
+            }
+
+            var administrationMenu = context.Menu.GetAdministration();
+
             var l = context.GetLocalizer<SaasResource>();
-             //Add main menu items.
+            //Add main menu items.
+
+            if (!await context.IsGrantedAsync(SaasPermissions.SaasEdition.Default) &&
+                !await context.IsGrantedAsync(SaasPermissions.SaasTenantConnectionString.Default) &&
+                !await context.IsGrantedAsync(SaasPermissions.SaasTenant.Default))
+            {
+                return;
+            }
+
+            var saasMenu = new ApplicationMenuItem(
+               SaasMenus.Prefix,
+               l["Menu:Saas"],
+               "/Saas",
+               icon: "fa fa-globe"
+           );
+
+            administrationMenu.AddItem(saasMenu);
 
             if (await context.IsGrantedAsync(SaasPermissions.SaasEdition.Default))
             {
-                context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/Dyabp/Saas/SaasEdition")
+                saasMenu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasEdition, l["Menu:SaasEdition"], "/Saas/SaasEdition")
                 );
             }
             if (await context.IsGrantedAsync(SaasPermissions.SaasTenantConnectionString.Default))
             {
-                context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/Dyabp/Saas/SaasTenantConnectionString")
+                saasMenu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasTenantConnectionString, l["Menu:SaasTenantConnectionString"], "/Saas/SaasTenantConnectionString")
                 );
             }
             if (await context.IsGrantedAsync(SaasPermissions.SaasTenant.Default))
             {
-                context.Menu.AddItem(
-                    new ApplicationMenuItem(SaasMenus.SaasTenant, l["Menu:SaasTenant"], "/Saas/Dyabp/Saas/SaasTenant")
+                saasMenu.AddItem(
+                    new ApplicationMenuItem(SaasMenus.SaasTenant, l["Menu:SaasTenant"], "/Saas/SaasTenant")
                 );
             }
         }

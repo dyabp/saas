@@ -3,7 +3,6 @@ using Volo.Abp.Application.Dtos;
 
 namespace Dyabp.Saas.Dtos
 {
-    [Serializable]
     public class SaasTenantConnectionStringDto : EntityDto
     {
         public Guid TenantId { get; set; }

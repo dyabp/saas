@@ -2,11 +2,11 @@ $(function () {
 
     var l = abp.localization.getResource('Saas');
 
-    var service = dyabp.saas.saasEdition;
-    var createModal = new abp.ModalManager(abp.appPath + 'Saas/Dyabp/Saas/SaasEdition/CreateModal');
-    var editModal = new abp.ModalManager(abp.appPath + 'Saas/Dyabp/Saas/SaasEdition/EditModal');
+    var service = dyabp.saas.saasTenant;
+    var createModal = new abp.ModalManager(abp.appPath + 'Saas/SaasTenant/CreateModal');
+    var editModal = new abp.ModalManager(abp.appPath + 'Saas/SaasTenant/EditModal');
 
-    var dataTable = $('#SaasEditionTable').DataTable(abp.libs.datatables.normalizeConfiguration({
+    var dataTable = $('#SaasTenantTable').DataTable(abp.libs.datatables.normalizeConfiguration({
         processing: true,
         serverSide: true,
         paging: true,
@@ -22,16 +22,16 @@ $(function () {
                         [
                             {
                                 text: l('Edit'),
-                                visible: abp.auth.isGranted('Saas.SaasEdition.Update'),
+                                visible: abp.auth.isGranted('Saas.SaasTenant.Update'),
                                 action: function (data) {
                                     editModal.open({ id: data.record.id });
                                 }
                             },
                             {
                                 text: l('Delete'),
-                                visible: abp.auth.isGranted('Saas.SaasEdition.Delete'),
+                                visible: abp.auth.isGranted('Saas.SaasTenant.Delete'),
                                 confirmMessage: function (data) {
-                                    return l('SaasEditionDeletionConfirmationMessage', data.record.id);
+                                    return l('SaasTenantDeletionConfirmationMessage', data.record.id);
                                 },
                                 action: function (data) {
                                     service.delete(data.record.id)
@@ -45,8 +45,16 @@ $(function () {
                 }
             },
             {
-                title: l('SaasEditionDisplayName'),
-                data: "displayName"
+                title: l('SaasTenantName'),
+                data: "name"
+            },
+            {
+                title: l('SaasTenantEditionId'),
+                data: "editionId"
+            },
+            {
+                title: l('SaasTenantConnectionStrings'),
+                data: "connectionStrings"
             },
         ]
     }));
@@ -59,7 +67,7 @@ $(function () {
         dataTable.ajax.reload();
     });
 
-    $('#NewSaasEditionButton').click(function (e) {
+    $('#NewSaasTenantButton').click(function (e) {
         e.preventDefault();
         createModal.open();
     });
