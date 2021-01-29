@@ -12,14 +12,14 @@ namespace Dyabp.Saas
              * Alternatively, you can split your mapping configurations
              * into multiple profile classes for a better organization. */
             CreateMap<SaasEdition, SaasEditionDto>();
+
             CreateMap<CreateSaasEditionDto, SaasEdition>(MemberList.Source);
             CreateMap<UpdateSaasEditionDto, SaasEdition>(MemberList.Source);
             CreateMap<SaasTenantConnectionString, SaasTenantConnectionStringDto>();
             CreateMap<CreateSaasTenantConnectionStringDto, SaasTenantConnectionString>(MemberList.Source);
             CreateMap<UpdateSaasTenantConnectionStringDto, SaasTenantConnectionString>(MemberList.Source);
-            CreateMap<SaasTenant, SaasTenantDto>();
-            CreateMap<CreateSaasTenantDto, SaasTenant>(MemberList.Source);
-            CreateMap<UpdateSaasTenantDto, SaasTenant>(MemberList.Source);
+
+            CreateMap<SaasTenant, SaasTenantDto>().MapExtraProperties();
         }
     }
 }

@@ -11,8 +11,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Dyabp.Saas.Migrations
 {
     [DbContext(typeof(UnifiedDbContext))]
-    [Migration("20210127081951_AddEntities")]
-    partial class AddEntities
+    [Migration("20210129093322_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

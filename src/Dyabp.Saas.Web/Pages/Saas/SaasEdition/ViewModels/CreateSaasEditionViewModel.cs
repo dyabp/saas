@@ -2,7 +2,7 @@ using System;
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasEdition.ViewModels
+namespace Dyabp.Saas.Web.Pages.Saas.SaasEdition.ViewModels
 {
     public class CreateSaasEditionViewModel
     {

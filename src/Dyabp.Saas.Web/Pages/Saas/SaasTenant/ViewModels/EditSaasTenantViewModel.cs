@@ -1,15 +1,19 @@
+using Microsoft.AspNetCore.Mvc;
 using System;
-
 using System.ComponentModel.DataAnnotations;
+using Volo.Abp.ObjectExtending;
+using Volo.Abp.Validation;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant.ViewModels
+namespace Dyabp.Saas.Web.Pages.Saas.SaasTenant.ViewModels
 {
-    public class EditSaasTenantViewModel
+    public class EditSaasTenantViewModel : ExtensibleObject
     {
-        [Display(Name = "SaasTenantName")]
-        public string Name { get; set; }
+        [HiddenInput]
+        public Guid Id { get; set; }
 
-        [Display(Name = "SaasTenantEditionId")]
-        public Guid? EditionId { get; set; }
+        [Required]
+        [DynamicStringLength(typeof(SaasTenantConsts), nameof(SaasTenantConsts.MaxNameLength))]
+        [Display(Name = "DisplayName:TenantName")]
+        public string Name { get; set; }
     }
 }

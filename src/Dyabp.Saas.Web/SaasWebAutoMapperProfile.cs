@@ -1,10 +1,9 @@
-using Dyabp.Saas.Dtos;
-using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasEdition.ViewModels;
-using Dyabp.Saas.Dtos;
-using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString.ViewModels;
-using Dyabp.Saas.Dtos;
-using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant.ViewModels;
 using AutoMapper;
+using Volo.Abp.AutoMapper;
+using Dyabp.Saas.Dtos;
+using Dyabp.Saas.Web.Pages.Saas.SaasEdition.ViewModels;
+using Dyabp.Saas.Web.Pages.Saas.SaasTenant.ViewModels;
+using Dyabp.Saas.Web.Pages.Saas.SaasTenantConnectionString.ViewModels;
 
 namespace Dyabp.Saas.Web
 {
@@ -18,12 +17,16 @@ namespace Dyabp.Saas.Web
             CreateMap<SaasEditionDto, EditSaasEditionViewModel>();
             CreateMap<CreateSaasEditionViewModel, CreateSaasEditionDto>();
             CreateMap<EditSaasEditionViewModel, UpdateSaasEditionDto>();
+
             CreateMap<SaasTenantConnectionStringDto, EditSaasTenantConnectionStringViewModel>();
             CreateMap<CreateSaasTenantConnectionStringViewModel, CreateSaasTenantConnectionStringDto>();
             CreateMap<EditSaasTenantConnectionStringViewModel, UpdateSaasTenantConnectionStringDto>();
+
             CreateMap<SaasTenantDto, EditSaasTenantViewModel>();
-            CreateMap<CreateSaasTenantViewModel, CreateSaasTenantDto>();
-            CreateMap<EditSaasTenantViewModel, UpdateSaasTenantDto>();
+            CreateMap<CreateSaasTenantViewModel, CreateSaasTenantDto>()
+                .MapExtraProperties();
+            CreateMap<EditSaasTenantViewModel, UpdateSaasTenantDto>()
+                .MapExtraProperties();
         }
     }
 }

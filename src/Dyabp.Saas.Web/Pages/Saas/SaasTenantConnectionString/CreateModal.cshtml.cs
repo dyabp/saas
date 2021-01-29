@@ -2,9 +2,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Dyabp.Saas;
 using Dyabp.Saas.Dtos;
-using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString.ViewModels;
+using Dyabp.Saas.Web.Pages.Saas.SaasTenantConnectionString.ViewModels;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString
+namespace Dyabp.Saas.Web.Pages.Saas.SaasTenantConnectionString
 {
     public class CreateModalModel : SaasPageModel
     {

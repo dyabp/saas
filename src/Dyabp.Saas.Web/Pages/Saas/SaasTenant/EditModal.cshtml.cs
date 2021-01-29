@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Dyabp.Saas;
 using Dyabp.Saas.Dtos;
-using Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant.ViewModels;
+using Dyabp.Saas.Web.Pages.Saas.SaasTenant.ViewModels;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant
+namespace Dyabp.Saas.Web.Pages.Saas.SaasTenant
 {
     public class EditModalModel : SaasPageModel
     {

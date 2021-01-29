@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenant
+namespace Dyabp.Saas.Web.Pages.Saas.SaasTenant
 {
     public class IndexModel : SaasPageModel
     {

@@ -2,7 +2,7 @@ using System;
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Dyabp.Saas.Web.Pages.Saas.Dyabp.Saas.SaasTenantConnectionString.ViewModels
+namespace Dyabp.Saas.Web.Pages.Saas.SaasTenantConnectionString.ViewModels
 {
     public class CreateSaasTenantConnectionStringViewModel
     {
